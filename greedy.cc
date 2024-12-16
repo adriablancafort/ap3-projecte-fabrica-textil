@@ -3,6 +3,7 @@
 #include <vector>
 #include <chrono>
 #include <algorithm>
+#include <iomanip>
 
 using namespace std;
 using namespace std::chrono;
@@ -15,7 +16,8 @@ struct Rectangle {
 
 int W, N;
 vector<Rectangle> rectangles;
-double startTime;
+steady_clock::time_point startTime;  // Changed type to time_point
+
 
 void readInput(const string& inputFile) {
     ifstream in(inputFile);
